@@ -3,7 +3,7 @@
 // (a que termina em /exec, copiada depois de "Nova implantação")
 // ============================================================
 const CONFIG = {
-  APPS_SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbzdMsM-WMT7XQFR_VzUELavJwBZL0c15dM4z6zDPXsWp-99NV-ci9iUYr3BrRr89i0/exec',
+  APPS_SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbwYHcuyL3Gz5sKM2JJXNloCqnluZqZQAweCsLTiTGmc6OKN3BAccQfleELu8_0NYm0/exec',
   NOME_USUARIO: 'Maria Clara' // por enquanto fixo; dá pra virar um campo de login simples depois
 };
 
