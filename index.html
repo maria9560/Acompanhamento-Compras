@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Controle de Compras da Família</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="theme-color" content="#1F4E78">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topo">
+  <h1>Compras da Família</h1>
+  <span id="status-conexao" class="status">Verificando conexão…</span>
+</header>
+
+<main>
+
+  <section id="tela-inicio" class="tela ativa">
+    <p class="texto-apoio">Bem-vinda(o)! Escolha uma ação abaixo. O app só fala com a internet quando você pedir.</p>
+    <div class="acoes-rapidas">
+      <button class="acao-grande" data-ir-para="tela-nova-compra">
+        <span class="icone">＋</span>
+        <span>Registrar nova compra</span>
+      </button>
+      <button class="acao-grande" data-ir-para="tela-falta">
+        <span class="icone">！</span>
+        <span>Marcar produto em falta</span>
+      </button>
+      <button class="acao-grande" data-ir-para="tela-dashboards">
+        <span class="icone">📊</span>
+        <span>Ver dashboards</span>
+      </button>
+    </div>
+  </section>
+
+  <section id="tela-nova-compra" class="tela">
+    <button class="voltar" data-ir-para="tela-inicio">← Voltar</button>
+    <h2>Registrar nova compra</h2>
+    <p class="texto-apoio">Em breve: tirar foto da nota e o Gemini lê os itens automaticamente. Essa etapa ainda vai ser construída.</p>
+  </section>
+
+  <section id="tela-falta" class="tela">
+    <button class="voltar" data-ir-para="tela-inicio">← Voltar</button>
+    <h2>Produtos em falta</h2>
+
+    <form id="form-nova-falta">
+      <label for="input-tipo-produto">Que produto acabou?</label>
+      <input id="input-tipo-produto" type="text" placeholder="Ex.: Óleo de soja" required>
+      <label for="input-categoria-falta">Categoria</label>
+      <select id="input-categoria-falta" required></select>
+      <button type="submit">Sinalizar falta</button>
+    </form>
+
+    <h3>Sinalizados atualmente</h3>
+    <ul id="lista-falta" class="lista"></ul>
+    <p id="mensagem-falta" class="mensagem"></p>
+  </section>
+
+  <section id="tela-dashboards" class="tela">
+    <button class="voltar" data-ir-para="tela-inicio">← Voltar</button>
+    <h2>Dashboards</h2>
+    <p class="texto-apoio">Em breve: curva de gastos mensais e percentual por categoria. Essa etapa ainda vai ser construída.</p>
+  </section>
+
+</main>
+
+<nav class="rodape">
+  <button data-ir-para="tela-inicio">Início</button>
+  <button data-ir-para="tela-nova-compra">Nova compra</button>
+  <button data-ir-para="tela-falta">Falta</button>
+  <button data-ir-para="tela-dashboards">Dashboards</button>
+</nav>
+
+<script src="app.js"></script>
+</body>
+</html>
