@@ -3,7 +3,7 @@
 // (a que termina em /exec, copiada depois de "Nova implantação")
 // ============================================================
 const CONFIG = {
-  APPS_SCRIPT_URL: 'COLE_AQUI_A_URL_DO_SEU_APPS_SCRIPT',
+  APPS_SCRIPT_URL: 'https://docs.google.com/spreadsheets/d/1lBImlCihyNLiwFi-9x6HspgoWeJ41vW-E45_4f29hEQ/edit?gid=0#gid=0',
   NOME_USUARIO: 'Maria Clara' // por enquanto fixo; dá pra virar um campo de login simples depois
 };
 
